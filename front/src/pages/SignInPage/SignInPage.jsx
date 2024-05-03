@@ -8,7 +8,9 @@ export default function SignInPage() {
                 <h1>Login Page</h1>
                 <input placeholder="email" type="email" name="email" />
                 <input placeholder="password" type="password" name="password" />
-                <button type="submit">Login</button>
+                <LinkContainer to={"/homePage"}>
+                    <button type="submit">Login</button>
+                </LinkContainer>
                 <h2>Não tem conta? Se cadastre clicando <LinkContainer to={"/signUpPage"}>AQUI</LinkContainer> !</h2>
             </Form>
         </PageContainer>
@@ -62,9 +64,6 @@ const Form = styled.form`
         font-size: 15px;
         margin-bottom: 10px;
         margin-top: 10px;
-        span {
-            
-        }
     }
 `
 
@@ -73,7 +72,6 @@ const LinkContainer = styled(Link)`
     font-weight: bolder;
     text-decoration: none;
     &:hover {
-        font-size:17px;
         color: black;
         cursor: pointer;
     }
