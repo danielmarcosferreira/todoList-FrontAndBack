@@ -2,6 +2,7 @@ import styled from "styled-components"
 import HeaderComponent from "../../components/HeaderComponent"
 import FooterComponent from "../../components/FooterComponent"
 import { IonCheckbox } from "@ionic/react";
+import AddTaskComponent from "../../components/AddTaskComponent";
 
 export default function HomePage() {
     let tarefas = [
@@ -20,7 +21,7 @@ export default function HomePage() {
 
         <HomePageContainer>
             <HeaderComponent />
-            
+            <AddTaskComponent />
             {tarefas.map((item) => <Tarefa>{item}</Tarefa>)}
             <FooterComponent />
         </HomePageContainer>
